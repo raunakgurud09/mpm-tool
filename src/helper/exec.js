@@ -1,3 +1,5 @@
+#! /usr/bin/env node
+
 import { exec } from "node:child_process";
 import loading from "loading-cli";
 
@@ -25,8 +27,8 @@ const executeCommand = (command = "node --version") => {
       // return;
     }
     // log the output received from the command
-    console.log("\nOutput: \n", output);
     load.stop();
+    console.log("\nOutput:\n", output);
   });
 };
 

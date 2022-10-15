@@ -57,10 +57,14 @@ async function buildConfig() {
   ]);
 
   if (confirmation.finalConfirmation) {
-    console.log(config.dependencies.join(" "));
-    executeCommand("npm --version");
-    console.log(config.devDependencies.join(" "));
-    executeCommand("npm --version");
+    var command = ` npm i ${config.dependencies.join(" ")}`;
+    console.log(`installing dependencies >>`);
+    await executeCommand(command);
+
+    command = `npm i -D ${config.devDependencies.join(" ")}`;
+    console.log(`installing devDependencies >>`);
+    console.log(`${config.devDependencies.join(" ")}`);
+    await executeCommand(command);
   } else {
     console.log("\n");
     buildConfig();
