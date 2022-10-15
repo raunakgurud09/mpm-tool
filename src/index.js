@@ -46,8 +46,21 @@ async function buildConfig() {
     default:
       break;
   }
-  console.log(config, null, 2);
-  executeCommand("npm --version")
+  console.log(config);
+  const confirmation = await inquirer.prompt([
+    {
+      type: "confirm",
+      name: "finalConfirmation",
+      message: "Are you okay to added these packages ?",
+      default: true,
+    },
+  ]);
+  if (confirmation.finalConfirmation) {
+    executeCommand("npm --version");
+  } else {
+    console.log('\n')
+    buildConfig();
+  }
 }
 
 if (fileExist) {
@@ -70,4 +83,3 @@ if (fileExist) {
 } else {
   buildConfig();
 }
-
