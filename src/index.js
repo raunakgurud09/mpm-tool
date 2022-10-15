@@ -4,7 +4,7 @@ import fs from "fs";
 import path from "path";
 
 import nodeExpress from "./config/node-express.js";
-import executeCommand from "../helper/exec.js";
+import executeCommand from "./helper/exec.js";
 
 const packageJsonPath = path.join(process.cwd(), "package.json");
 const fileExist = fs.existsSync(packageJsonPath);
@@ -55,10 +55,14 @@ async function buildConfig() {
       default: true,
     },
   ]);
+
   if (confirmation.finalConfirmation) {
+    console.log(config.dependencies.join(" "));
+    executeCommand("npm --version");
+    console.log(config.devDependencies.join(" "));
     executeCommand("npm --version");
   } else {
-    console.log('\n')
+    console.log("\n");
     buildConfig();
   }
 }
