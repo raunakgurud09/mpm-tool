@@ -1,3 +1,5 @@
+#! /usr/bin/env node
+
 import inquirer from "inquirer";
 
 import fs from "fs";
@@ -63,7 +65,6 @@ async function buildConfig() {
 
     command = `npm i -D ${config.devDependencies.join(" ")}`;
     console.log(`installing devDependencies >>`);
-    console.log(`${config.devDependencies.join(" ")}`);
     await executeCommand(command);
   } else {
     console.log("\n");
@@ -89,5 +90,6 @@ if (fileExist) {
       }
     });
 } else {
-  buildConfig();
+  console.log("Initialize package.json (npm init)");
+  process.exit(0);
 }
