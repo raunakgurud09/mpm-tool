@@ -3,15 +3,10 @@ import inquirer from "inquirer";
 import fs from "fs";
 import path from "path";
 
-// const getPath = () => {
-//   console.log(process.cwd());
-// };
-// getPath();
+import nodeExpress from "./config/node-express.js";
 
 const packageJsonPath = path.join(process.cwd(), "package.json");
 const fileExist = fs.existsSync(packageJsonPath);
-
-console.log(fileExist);
 
 async function buildConfig() {
   let config = {
@@ -32,9 +27,11 @@ async function buildConfig() {
       choices: ["node-express", "react", "vue", "static"],
     },
   ]);
+  config.name = answers.name;
+  config.projectType = answers.projectType;
   switch (answers.projectType) {
     case "node-express":
-      console.log("node_express");
+      config = await nodeExpress(config);
       break;
     case "react":
       console.log("react");
@@ -48,6 +45,7 @@ async function buildConfig() {
     default:
       break;
   }
+  console.log(config);
 }
 
 if (fileExist) {
