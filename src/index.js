@@ -4,13 +4,14 @@ import fs from "fs";
 import path from "path";
 
 import nodeExpress from "./config/node-express.js";
+import executeCommand from "../helper/exec.js";
 
 const packageJsonPath = path.join(process.cwd(), "package.json");
 const fileExist = fs.existsSync(packageJsonPath);
 
 async function buildConfig() {
   let config = {
-    version: 2,
+    version: 1,
   };
 
   const answers = await inquirer.prompt([
@@ -45,7 +46,8 @@ async function buildConfig() {
     default:
       break;
   }
-  console.log(config);
+  console.log(config, null, 2);
+  executeCommand("npm --version")
 }
 
 if (fileExist) {
@@ -68,3 +70,4 @@ if (fileExist) {
 } else {
   buildConfig();
 }
+
