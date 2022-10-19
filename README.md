@@ -4,6 +4,9 @@ This is a cli tool which makes downloading npm packages easy
 
   Fast and easy way to download npm packages for [Node.js](http://nodejs.org).
 
+  This package is in beta version would add a lot of feature soon any suggestions
+  or PR's to contribution would be great 
+
 ## Installation
 
 This is a [Node.js](https://nodejs.org/en/) module available through the
