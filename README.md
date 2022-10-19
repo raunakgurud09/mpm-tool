@@ -1,13 +1,8 @@
-# npm-cli
+# mpm-tool
+Manage-package-manager
 This is a cli tool which makes downloading npm packages easy
 
-
-  Fast, unopinionated, minimalist web framework for [Node.js](http://nodejs.org).
-
-  [![NPM Version][npm-version-image]][npm-url]
-  [![NPM Install Size][npm-install-size-image]][npm-install-size-url]
-  [![NPM Downloads][npm-downloads-image]][npm-downloads-url]
-
+  Fast and easy way to download npm packages for [Node.js](http://nodejs.org).
 
 ## Installation
 
@@ -29,8 +24,8 @@ $ npm install mpm-tool
 
 ## Features
 
-  * Easy to dowload npm packages
-  * Always download offical package
+  * Easy to download npm packages
+  * Always download official package
   * Safe and secure tool
 
 ## Quick Start
@@ -48,19 +43,16 @@ $ npm install -g mpm-tool
 ```console
 $ mpm-tool 
 ```
-  An auto script will generate and help you guide in the dowload process
+  An auto script will generate and help you guide in the download process
 
 ## Philosophy
 
-  The mpm-tool philosophy is to provide a tool that help you to dowload and maintain various 
+  The mpm-tool philosophy is to provide a tool that help you to download and maintain various 
   packages without making any skill typo will downloading which can be very harmful for you 
   project
 
 ## Contributing
 
-  [![Linux Build][github-actions-ci-image]][github-actions-ci-url]
-  [![Windows Build][appveyor-image]][appveyor-url]
-  [![Test Coverage][coveralls-image]][coveralls-url]
 
 The mpm-tool project welcomes all constructive contributions. Contributions take many forms,
 from code for bug fixes and enhancements, to additions and fixes to documentation, additional
@@ -70,7 +62,7 @@ See the [Contributing Guide](Contributing.md) for more technical details on cont
 
 ### Security Issues
 
-If you discover a security vulnerability in mpm-tool, please see [Raunak Gurud](mail to raunakgurud2121@gmail.com).
+If you discover a security vulnerability in mpm-tool, please see [Raunak Gurud](raunakgurud2121@gmail.com).
 
 ### Running Tests
 
