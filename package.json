@@ -1,6 +1,6 @@
 {
   "name": "mpm-tool",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "This is cli tool to download npm packages",
   "type": "module",
   "main": "src/index.js",
@@ -9,11 +9,16 @@
     "start": "node index.js"
   },
   "keywords": [
-    "npm-cli",
+    "mpm-tool",
+    "manage-packages",
     "cli",
     "npm",
     "node"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/raunakgurud09/npm-cli"
+  },
   "author": "Raunak Gurud",
   "license": "MIT",
   "dependencies": {
