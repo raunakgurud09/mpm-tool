@@ -37,13 +37,13 @@ async function buildConfig() {
       config = await nodeExpress(config);
       break;
     case "react":
-      console.log("react");
+      console.log("react : still in beta version");
       break;
     case "vue":
-      console.log("vue");
+      console.log("vue : still in beta version");
       break;
     case "static":
-      console.log("static");
+      console.log("static : still in beta version");
       break;
     default:
       break;
