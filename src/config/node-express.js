@@ -1,7 +1,18 @@
 import inquirer from "inquirer";
 
 const packages = {
-  dependencies: ["express", "dotenv", "mongoose"],
+  dependencies: [
+    "express",
+    "dotenv",
+    "mongoose",
+    "axios",
+    "lodash",
+    "prisma",
+    "express-fileupload",
+    "bcryptjs",
+    "cloudinary",
+    ""
+  ],
   devDependencies: ["nodemon", "eslint", "typescript"],
 };
 

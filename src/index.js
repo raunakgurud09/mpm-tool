@@ -27,7 +27,7 @@ async function buildConfig() {
       type: "list",
       name: "projectType",
       message: "What type of project is this",
-      choices: ["node-express", "react", "vue", "static"],
+      choices: ["node-express", "", "", ""],
     },
   ]);
   config.name = answers.name;
